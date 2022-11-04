@@ -1,0 +1,50 @@
+{
+  "usesTypeScript": true,
+  "usesCssModule": false,
+  "cssPreprocessor": "scss",
+  "testLibrary": "Testing Library",
+  "component": {
+    "default": {
+      "path": "src/shared/ui",
+      "withStyle": false,
+      "withTest": false,
+      "withStory": true,
+      "withLazy": false,
+      "withIndex": true,
+      "customTemplates": {
+        "index": "templates/default/index.ts",
+        "component": "templates/default/TemplateName.vue",
+        "story": "templates/default/TemplateName.stories.tsx",
+        "test": "templates/default/TemplateName.test.ts"
+      }
+    },
+    "simple": {
+      "path": "src/shared/ui",
+      "withStyle": false,
+      "withTest": false,
+      "withStory": true,
+      "withLazy": false,
+      "withIndex": true,
+      "customTemplates": {
+        "index": "templates/simple/index.ts",
+        "component": "templates/simple/TemplateName.vue",
+        "story": "templates/simple/TemplateName.stories.tsx",
+        "test": "templates/simple/TemplateName.test.ts"
+      }
+    },
+    "page": {
+      "path": "src/page",
+      "withStyle": false,
+      "withTest": false,
+      "withStory": true,
+      "withLazy": false,
+      "withIndex": true,
+      "customTemplates": {
+        "index": "templates/page/index.ts",
+        "component": "templates/page/TemplateName.vue",
+        "story": "templates/page/TemplateName.stories.tsx",
+        "test": "templates/page/TemplateName.test.ts"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+!.cz-config.js
+!.storybook
+!env.d.ts
+!.vite
+!.lintstagedrc.js
+!.stylelintrc.json
+!src/**/*.d.ts
+
+templates
+.svg

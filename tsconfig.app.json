@@ -1,0 +1,26 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": [
+    "env.d.ts",
+    "auto-imports.d.ts",
+    "typed-router.d.ts",
+    "components.d.ts",
+    "src/**/*",
+    "src/**/*.json",
+    ".storybook/preview.ts"
+  ],
+  "exclude": [],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "noErrorTruncation": true,
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@intlify/core-base": ["./node_modules/@intlify/core-base/"]
+    }
+  },
+  "vueCompilerOptions": {
+    "jsxTemplates": true
+  }
+}
