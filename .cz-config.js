@@ -3,19 +3,19 @@ const fs = require('fs')
 const baseDir = 'src'
 const readFolders = (dir) => fs.readdirSync(`${baseDir}/${dir}`)
 
-const pages = readFolders('pages')
-  .filter((page) => !page.endsWith('.ts'))
-  .map(
-    (page) => readFolders(`pages/${page}`)
-      .map((sub) => [page, ...readFolders(`pages/${page}/${sub}`)])
-      .flat()
-      .filter((file) => file.endsWith('.vue')).at(0).replace('.vue', ''),
-  )
-const widgets = readFolders('widgets')
-const features = [] // readFolders('features')
-const entities = readFolders('entities')
-  .map((entity) => [entity, ...readFolders(`entities/${entity}/ui`)])
-  .flat()
+// const pages = readFolders('pages')
+//   .filter((page) => !page.endsWith('.ts'))
+//   .map(
+//     (page) => readFolders(`pages/${page}`)
+//       .map((sub) => [page, ...readFolders(`pages/${page}/${sub}`)])
+//       .flat()
+//       .filter((file) => file.endsWith('.vue')).at(0).replace('.vue', ''),
+//   )
+// const widgets = readFolders('widgets')
+// const features = [] // readFolders('features')
+// const entities = readFolders('entities')
+//   .map((entity) => [entity, ...readFolders(`entities/${entity}/ui`)])
+//   .flat()
 const sharedUI = readFolders('shared/ui')
 const sharedLibs = readFolders('shared/lib')
 
@@ -46,20 +46,20 @@ module.exports = {
 
     '---',
     'pages',
-    ...pages,
+    // ...pages,
 
     '---',
 
     'widgets',
-    ...widgets,
+    // ...widgets,
 
     '---',
     'features',
-    ...features,
+    // ...features,
 
     '---',
     'entities',
-    ...entities,
+    // ...entities,
 
     '---',
     'shared',
